@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  --color-brand-dark-bg: #0B1418;
+  --color-brand-dark-grad-end: #0E1A14;
+  --color-brand-card: #132220;
+  --color-brand-card-hover: #192F2C;
+  --color-brand-border: #1E3733;
+  --color-brand-border-glow: #2A4F4A;
+  --color-brand-emerald: #10B981;
+  --color-brand-emerald-hover: #059669;
+  --color-brand-blue: #3B82F6;
+  --color-brand-gold: #F59E0B;
+  
+  --shadow-glow-emerald: 0 0 15px rgba(16, 185, 129, 0.15);
+  --shadow-glow-blue: 0 0 15px rgba(59, 130, 246, 0.15);
+  --shadow-glow-gold: 0 0 15px rgba(245, 158, 11, 0.15);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-dark-bg);
+    background-image: radial-gradient(circle at 50% 0%, var(--color-brand-dark-grad-end) 0%, var(--color-brand-dark-bg) 70%);
+    color: #E2E8F0;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar for premium dark theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B1418;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E3733;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #10B981;
+  }
+}
+
+/* Custom styles for glowing border cards */
+.glow-card {
+  background-color: var(--color-brand-card);
+  border: 1px solid var(--color-brand-border);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-card:hover {
+  background-color: var(--color-brand-card-hover);
+  border-color: var(--color-brand-emerald);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7), var(--shadow-glow-emerald);
+}
+
+/* Neon accents */
+.text-glow-emerald {
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+.text-glow-blue {
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+.text-glow-gold {
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+/* 3D Flip Card CSS */
+.flip-card {
+  perspective: 1000px;
+  height: 260px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1.5rem; /* rounded-3xl */
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+

@@ -1,0 +1,106 @@
+{
+  "profile": {
+    "name": "Rajesh Kumar",
+    "city": "Mumbai",
+    "familySize": 4,
+    "electricityRate": 7.5,
+    "emissionFactor": 0.82
+  },
+  "bills": [
+    {
+      "id": "bill_1781966807557",
+      "dateAdded": "2026-06-20T14:46:47.557Z",
+      "billingPeriod": "June 2026",
+      "unitsConsumed": 350,
+      "billAmount": 2625,
+      "savingsPotentialRupees": 398,
+      "savedKWh": 53,
+      "co2SavedKg": 43.46,
+      "recommendations": [
+        {
+          "title": "AC Temperature Setting",
+          "description": "Set your air conditioner to 24°C or 26°C instead of 18°C. Every 1°C increase saves about 6% of AC electricity.",
+          "rupeeSavings": 199,
+          "co2Savings": 21.7
+        },
+        {
+          "title": "Standby Power Audit",
+          "description": "Turn off televisions, Wi-Fi routers at night, and chargers from the wall switch. Standby power accounts for 5-10% of your bill.",
+          "rupeeSavings": 119,
+          "co2Savings": 13
+        },
+        {
+          "title": "LED Lighting Upgrade",
+          "description": "Replace remaining tube lights or old CFL bulbs with energy-efficient 9W LED bulbs in common areas like the kitchen and hall.",
+          "rupeeSavings": 80,
+          "co2Savings": 8.7
+        }
+      ]
+    }
+  ],
+  "travelLogs": [
+    {
+      "id": "travel_1781966860745",
+      "dateAdded": "2026-06-20T14:47:40.745Z",
+      "distanceKm": 15,
+      "currentCO2Kg": 2.7,
+      "currentCostRupees": 125,
+      "alternativeMode": "Metro & Share Auto",
+      "reasoning": "For traveling from \"Andheri West to Bandra Kurla Complex, shifting from a private vehicle to the Metro will help you completely bypass city traffic. Using the Metro coupled with shared first/last-mile autos reduces your travel cost to just ₹50 and prevents 2.16 kg of carbon pollution!",
+      "savingsRupees": 75,
+      "co2SavedKg": 2.16
+    }
+  ],
+  "streakLogs": [],
+  "chatHistory": [
+    {
+      "id": "msg_1781966885438",
+      "role": "user",
+      "text": "Bathroom ka flush tank leak ho raha hai, continuously flush chal raha hai",
+      "timestamp": "2026-06-20T14:48:05.438Z"
+    },
+    {
+      "id": "msg_1781966885721",
+      "role": "model",
+      "text": "{\"message\":\"Oh ho! Dripping tap ya leaky tap toh bohot paani waste karta hai. Ek ek boond se bucket bhar jaati hai! Isko jaldi se fix kijiye, ek naya rubber washer fitting ₹10-20 me ho jayega par har mahine ka ₹120 bill bachaega! Aap local plumber ko call karein ya khud Teflon tape lagayein.\",\"impactMetadata\":{\"rupeeImpact\":120,\"waterImpactLitres\":600,\"actionItem\":\"Tap washer badalye or use Teflon tape\"}}",
+      "timestamp": "2026-06-20T14:48:05.721Z"
+    }
+  ],
+  "leaderboardUsers": [
+    {
+      "name": "Sneha Gupta",
+      "city": "Bengaluru",
+      "savings": 1850,
+      "ecoScore": 92,
+      "ecoCoins": 850
+    },
+    {
+      "name": "Priya Patel",
+      "city": "Ahmedabad",
+      "savings": 1420,
+      "ecoScore": 86,
+      "ecoCoins": 680
+    },
+    {
+      "name": "Aarav Sharma",
+      "city": "Delhi",
+      "savings": 1100,
+      "ecoScore": 78,
+      "ecoCoins": 510
+    },
+    {
+      "name": "Amit Singh",
+      "city": "Pune",
+      "savings": 680,
+      "ecoScore": 65,
+      "ecoCoins": 320
+    },
+    {
+      "name": "Vikram Mehta",
+      "city": "Mumbai",
+      "savings": 250,
+      "ecoScore": 48,
+      "ecoCoins": 120
+    }
+  ]
+}
