@@ -318,6 +318,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
                       id="billFileInput"
                       onChange={handleFileChange}
                       accept="image/*,application/pdf"
+                      aria-label="Upload electricity bill image or PDF"
                       className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                     />
                     <Upload className="w-8 h-8 text-brand-emerald mx-auto mb-2 animate-bounce" />
@@ -346,6 +347,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
                       placeholder="e.g. May 2026" 
                       value={period}
                       onChange={(e) => setPeriod(e.target.value)}
+                      aria-label="Billing period month and year"
                       className="w-full px-3 py-2 text-sm rounded-xl bg-brand-dark-bg border border-brand-border focus:border-brand-emerald focus:outline-none text-white"
                     />
                   </div>
@@ -359,6 +361,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
                         placeholder="e.g. 350" 
                         value={units}
                         onChange={(e) => setUnits(e.target.value)}
+                        aria-label="Units consumed in kilowatt-hours"
                         className="w-full px-3 py-2 text-sm rounded-xl bg-brand-dark-bg border border-brand-border focus:border-brand-emerald focus:outline-none text-white"
                       />
                     </div>
@@ -371,6 +374,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
                         placeholder="e.g. 2600" 
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}
+                        aria-label="Electricity bill amount in rupees"
                         className="w-full px-3 py-2 text-sm rounded-xl bg-brand-dark-bg border border-brand-border focus:border-brand-emerald focus:outline-none text-white"
                       />
                     </div>
@@ -388,6 +392,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
               <button
                 type="submit"
                 disabled={isLoading || (!isManual && !file)}
+                aria-label="Submit electricity bill for auditing"
                 className={`w-full py-2.5 rounded-xl text-xs font-bold font-display flex items-center justify-center gap-2 transition-all ${
                   isLoading
                     ? 'bg-brand-border text-gray-500 cursor-not-allowed'

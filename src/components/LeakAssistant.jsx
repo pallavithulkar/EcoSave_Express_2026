@@ -244,12 +244,14 @@ export default function LeakAssistant({ chatHistory, onSendChatMessage, onResetC
               placeholder="Ask Boond in Hinglish (e.g. 'Bathroom tape tapak raha hai...')" 
               value={inputMsg}
               onChange={(e) => setInputMsg(e.target.value)}
+              aria-label="Water leak description message"
               className="flex-1 px-4 py-2 text-xs rounded-xl bg-brand-dark-bg border border-brand-border focus:border-brand-gold focus:outline-none text-white font-medium"
               disabled={isLoading}
             />
             <button
               type="submit"
               disabled={isLoading || !inputMsg.trim()}
+              aria-label="Send message to water leak assistant"
               className={`p-2.5 rounded-xl transition-all ${
                 isLoading || !inputMsg.trim()
                   ? 'bg-brand-border text-gray-500 cursor-not-allowed'

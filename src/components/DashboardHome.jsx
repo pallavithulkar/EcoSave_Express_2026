@@ -387,7 +387,7 @@ export default function DashboardHome({ stats, profile, setActiveTab }) {
           <div className="flex items-center gap-5 my-3">
             <div className="w-16 h-16 rounded-full bg-brand-emerald/10 border border-brand-emerald/20 flex items-center justify-center shadow-glow-emerald relative overflow-hidden flex-shrink-0">
               {/* SVG Tree illustration */}
-              <svg viewBox="0 0 100 100" className="w-10 h-10">
+              <svg viewBox="0 0 100 100" className="w-10 h-10" role="img" aria-label="Tree and Sun illustration">
                 <circle cx="50" cy="40" r="22" fill="#047857" opacity="0.8" />
                 <circle cx="38" cy="48" r="18" fill="#10B981" />
                 <circle cx="62" cy="48" r="18" fill="#059669" />
@@ -408,6 +408,7 @@ export default function DashboardHome({ stats, profile, setActiveTab }) {
 
           <button 
             onClick={() => setActiveTab('impact')}
+            aria-label="View detailed carbon impact analogies"
             className="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl bg-brand-emerald text-brand-dark-bg text-xs font-extrabold uppercase hover:bg-brand-emerald-hover hover:scale-[1.01] transition-all cursor-pointer shadow-md shadow-brand-emerald/10"
           >
             <span>See Impact Mirror</span> <ChevronRight className="w-3.5 h-3.5 stroke-[3]" />

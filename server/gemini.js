@@ -231,7 +231,7 @@ function generateChatFallback(userMessage) {
 }
 
 // Helper to hash string to coordinates (30-130 for start, 230-350 for destination)
-function getCoordsFromString(name, isStart) {
+export function getCoordsFromString(name, isStart) {
   let hash = 0;
   for (let i = 0; i < name.length; i++) {
     hash = name.charCodeAt(i) + ((hash << 5) - hash);
@@ -239,11 +239,11 @@ function getCoordsFromString(name, isStart) {
   hash = Math.abs(hash);
   if (isStart) {
     const x = 30 + (hash % 100);
-    const y = 30 + ((hash >> 2) % 70);
+    const y = 30 + (Math.floor(hash / 4) % 70);
     return { x, y };
   } else {
     const x = 230 + (hash % 120);
-    const y = 140 + ((hash >> 2) % 70);
+    const y = 140 + (Math.floor(hash / 4) % 70);
     return { x, y };
   }
 }
@@ -384,7 +384,7 @@ export async function getTravelRecommendation(start, destination, mode, spendOrD
   }
 }
 
-function generateTravelFallback(start, destination, mode, distanceKm, currentCO2Kg, currentCostRupees) {
+export function generateTravelFallback(start, destination, mode, distanceKm, currentCO2Kg, currentCostRupees) {
   let alternativeMode = 'Metro & Share Auto';
   let savingsRupees = Math.round(currentCostRupees * 0.6);
   let co2SavedKg = Number((currentCO2Kg * 0.8).toFixed(2));

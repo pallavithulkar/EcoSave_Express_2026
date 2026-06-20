@@ -5,6 +5,8 @@ import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
 import { db } from './db.js';
 import { analyzeBill, getLeakAssistantResponse, getTravelRecommendation, getImpactAnalogy } from './gemini.js';
 
@@ -15,6 +17,22 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Apply Security Middleware
+app.use(helmet({
+  contentSecurityPolicy: false, // disabled to prevent blocking local Vite or public assets
+  crossOriginEmbedderPolicy: false
+}));
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per window
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Too many requests from this IP, please try again after 15 minutes' }
+});
+
+app.use('/api/', limiter);
 
 // Enable CORS and JSON body parser
 app.use(cors());

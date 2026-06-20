@@ -113,6 +113,7 @@ export default function TravelSmarter({ travelLogs, onAddTravelLog }) {
                     placeholder="e.g. Andheri West" 
                     value={start}
                     onChange={(e) => setStart(e.target.value)}
+                    aria-label="Travel start point"
                     className="w-full px-3 py-2 text-xs rounded-xl bg-brand-dark-bg border border-brand-border focus:border-brand-blue focus:outline-none text-white font-medium"
                     required
                   />
@@ -126,6 +127,7 @@ export default function TravelSmarter({ travelLogs, onAddTravelLog }) {
                     placeholder="e.g. Bandra Kurla Complex" 
                     value={destination}
                     onChange={(e) => setDestination(e.target.value)}
+                    aria-label="Travel destination"
                     className="w-full px-3 py-2 text-xs rounded-xl bg-brand-dark-bg border border-brand-border focus:border-brand-blue focus:outline-none text-white font-medium"
                     required
                   />
@@ -139,6 +141,7 @@ export default function TravelSmarter({ travelLogs, onAddTravelLog }) {
                 <select 
                   value={mode}
                   onChange={(e) => setMode(e.target.value)}
+                  aria-label="Select current travel mode"
                   className="w-full px-3 py-2 text-xs rounded-xl bg-brand-dark-bg border border-brand-border focus:border-brand-blue focus:outline-none text-white font-medium"
                 >
                   {travelModes.map((m) => (
@@ -158,6 +161,7 @@ export default function TravelSmarter({ travelLogs, onAddTravelLog }) {
                   placeholder={mode.includes('Car') || mode.includes('wheeler') ? "e.g. 15 km or ₹300 spend" : "e.g. 12"} 
                   value={spendOrDist}
                   onChange={(e) => setSpendOrDist(e.target.value)}
+                  aria-label="Travel distance or fuel spend amount"
                   className="w-full px-3 py-2 text-xs rounded-xl bg-brand-dark-bg border border-brand-border focus:border-brand-blue focus:outline-none text-white font-medium"
                   required
                 />
@@ -176,6 +180,7 @@ export default function TravelSmarter({ travelLogs, onAddTravelLog }) {
               <button
                 type="submit"
                 disabled={isLoading}
+                aria-label="Calculate carbon and optimize travel route"
                 className={`w-full py-2.5 rounded-xl text-xs font-bold font-display flex items-center justify-center gap-2 transition-all ${
                   isLoading
                     ? 'bg-brand-border text-gray-500 cursor-not-allowed'
@@ -253,6 +258,8 @@ export default function TravelSmarter({ travelLogs, onAddTravelLog }) {
                 viewBox="0 0 400 300" 
                 className="w-full h-full max-h-[300px]"
                 xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="City grid transit carbon optimizer map"
               >
                 {/* City Grid Background lines */}
                 <defs>

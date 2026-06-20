@@ -60,6 +60,7 @@ export default function Sidebar({ activeTab, setActiveTab, profile, stats }) {
               <button
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
+                aria-label={`Navigate to ${item.name} tab`}
                 className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all duration-200 text-xs font-semibold ${
                   isActive
                     ? 'bg-brand-emerald text-[#0C1816] font-bold shadow-md shadow-brand-emerald/20'
@@ -79,7 +80,7 @@ export default function Sidebar({ activeTab, setActiveTab, profile, stats }) {
         {/* Today's Eco Score Circle Gauge */}
         <div className="bg-[#122421]/60 rounded-xl p-3 border border-[#1B3B34] flex items-center gap-4 text-white">
           <div className="relative w-12 h-12 flex items-center justify-center flex-shrink-0">
-            <svg className="w-12 h-12 transform -rotate-90">
+            <svg className="w-12 h-12 transform -rotate-90" role="img" aria-label="Circular Eco Score gauge">
               <circle
                 className="text-[#1A342E]"
                 strokeWidth={stroke}
