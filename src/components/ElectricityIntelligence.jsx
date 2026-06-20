@@ -506,6 +506,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
               <button
                 type="button"
                 onClick={() => setActiveRoom('bedroom')}
+                aria-label="Audit bedroom details"
                 className={`absolute transition-all duration-300 flex flex-col items-start gap-0.5 px-3 py-1.5 rounded-xl border text-[11px] font-bold bg-brand-card/95 cursor-pointer shadow-md select-none ${getBadgeStyles(scores.bedroom, 'bedroom')}`}
                 style={{ top: '24%', left: '15%' }}
               >
@@ -523,6 +524,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
               <button
                 type="button"
                 onClick={() => setActiveRoom('solar')}
+                aria-label="Audit rooftop solar details"
                 className={`absolute transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl border text-[11px] font-bold bg-brand-card/95 cursor-pointer shadow-md select-none ${getBadgeStyles(scores.solar, 'solar')}`}
                 style={{ top: '15%', left: '48%' }}
               >
@@ -535,6 +537,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
               <button
                 type="button"
                 onClick={() => setActiveRoom('bathroom')}
+                aria-label="Audit bathroom details"
                 className={`absolute transition-all duration-300 flex flex-col items-start gap-0.5 px-3 py-1.5 rounded-xl border text-[11px] font-bold bg-brand-card/95 cursor-pointer shadow-md select-none ${getBadgeStyles(scores.bathroom, 'bathroom')}`}
                 style={{ top: '54%', left: '12%' }}
               >
@@ -552,6 +555,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
               <button
                 type="button"
                 onClick={() => setActiveRoom('kitchen')}
+                aria-label="Audit kitchen details"
                 className={`absolute transition-all duration-300 flex flex-col items-start gap-0.5 px-3 py-1.5 rounded-xl border text-[11px] font-bold bg-brand-card/95 cursor-pointer shadow-md select-none ${getBadgeStyles(scores.kitchen, 'kitchen')}`}
                 style={{ top: '48%', left: '70%' }}
               >
@@ -569,6 +573,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
               <button
                 type="button"
                 onClick={() => setActiveRoom('livingRoom')}
+                aria-label="Audit living room details"
                 className={`absolute transition-all duration-300 flex flex-col items-start gap-0.5 px-3 py-1.5 rounded-xl border text-[11px] font-bold bg-brand-card/95 cursor-pointer shadow-md select-none ${getBadgeStyles(scores.livingRoom, 'livingRoom')}`}
                 style={{ top: '76%', left: '30%' }}
               >
@@ -586,6 +591,7 @@ export default function ElectricityIntelligence({ bills, onAddBill, profile, sta
               <button
                 type="button"
                 onClick={() => setActiveRoom('garden')}
+                aria-label="Audit garden details"
                 className={`absolute transition-all duration-300 flex items-center gap-2 px-3 py-1.5 rounded-xl border text-[11px] font-bold bg-brand-card/95 cursor-pointer shadow-md select-none ${getBadgeStyles(scores.garden, 'garden')}`}
                 style={{ top: '78%', left: '64%' }}
               >
